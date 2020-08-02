@@ -14,7 +14,10 @@ FROM salaries
 INNER JOIN employees ON
 employees.emp_no = salaries.emp_no;
 
---2. List the manager of each department with the following information: 
+--2. List first name, last name, and hire date for employees who were hired in 1986.
+
+
+--3. List the manager of each department with the following information: 
 --department number, department name, the manager's employee number, last name, first name.
 
 SELECT m.dept_no, d.dept_name, m.emp_no, e.last_name, e.first_name  
