@@ -13,3 +13,13 @@ SELECT employees.emp_no, employees.last_name, employees.first_name, employees.se
 FROM salaries
 INNER JOIN employees ON
 employees.emp_no = salaries.emp_no;
+
+--2. List the manager of each department with the following information: 
+--department number, department name, the manager's employee number, last name, first name.
+
+SELECT m.dept_no, d.dept_name, m.emp_no, e.last_name, e.first_name  
+FROM employees AS e
+  JOIN dept_manager AS m
+  ON (m.emp_no = e.emp_no)
+    JOIN departments AS d
+    ON (d.dept_no = m.dept_no);
