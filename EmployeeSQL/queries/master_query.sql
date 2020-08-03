@@ -18,8 +18,7 @@ employees.emp_no = salaries.emp_no;
 
 SELECT employees.first_name, employees.last_name, employees.hire_date 
 FROM employees
-WHERE
-hire_date BETWEEN '1986-01-01' AND '1986-12-31'
+WHERE hire_date BETWEEN '1986-01-01' AND '1986-12-31'
 ORDER BY hire_date ASC;
 
 --3. List the manager of each department with the following information: 
@@ -31,3 +30,14 @@ FROM employees AS e
   ON (m.emp_no = e.emp_no)
     JOIN departments AS d
     ON (d.dept_no = m.dept_no);
+
+--4. List the department of each employee with the following information: 
+--employee number, last name, first name, and department name.
+
+SELECT e.emp_no, e.last_name,  e.first_name, d.dept_name  
+FROM employees AS e
+  JOIN dept_emp AS p
+  ON (p.emp_no = e.emp_no)
+    JOIN departments AS d
+    ON (d.dept_no = p.dept_no)
+	ORDER BY e.emp_no ASC;
