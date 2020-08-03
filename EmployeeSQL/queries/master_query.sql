@@ -42,9 +42,13 @@ FROM employees AS e
     ON (d.dept_no = p.dept_no)
 	ORDER BY e.emp_no ASC;
 	
---List first name, last name, and sex 
+--5. List first name, last name, and sex 
 --for employees whose first name is "Hercules" and last names begin with "B."
 
 SELECT e.first_name, e.last_name, e.sex  
 FROM employees AS e
 WHERE e.first_name LIKE 'Hercules' AND e.last_name LIKE 'B%';
+
+--6. List all employees in the Sales department
+--including their employee number, last name, first name, and department name.
+
