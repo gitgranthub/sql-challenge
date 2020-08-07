@@ -70,6 +70,6 @@ FROM employees AS e
   ON (p.emp_no = e.emp_no)
     JOIN departments AS d
     ON (d.dept_no = p.dept_no)
-	WHERE d.dept_name = 'Sales' AND d.dept_name = 'Development'
+	WHERE d.dept_name IN ('Sales','Development')
 	ORDER BY e.emp_no ASC;
 
