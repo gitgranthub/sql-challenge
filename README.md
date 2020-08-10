@@ -15,4 +15,4 @@ In this assignment I designed the ERD and tables, to hold the six employee CSV f
 
 ![avg_salary_title.png](EmployeeSQL/images/avg_salary_title.png)
 
-As a bonus I imported the SQL database into Python/Jupyter Lab and created the above two plots. The plots display the distributed salary range of the employees from the 1980s and 1990s. The second bar chat displays the average salary among titles.
+As a bonus I imported the SQL database into Python/Jupyter Lab and created the above two plots. The plots display the distributed salary range of the employees from the 1980s and 1990s. The second 'bar' chart displays the average salary among titles.
